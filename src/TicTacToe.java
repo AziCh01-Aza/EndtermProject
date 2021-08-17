@@ -210,9 +210,7 @@ public class TicTacToe implements ActionListener{
         ) {
             oWins(2,4,6);
         }
-        else {
-            draw();
-        }
+
     }
 
     public void xWins(int a,int b,int c) {
@@ -229,6 +227,7 @@ public class TicTacToe implements ActionListener{
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         db.execSQL("insert into winners values('" + s + "')");
+        System.out.println(db.execSQL("Select name from winners"));
     }
     public void oWins(int a,int b,int c) {
         buttons[a].setBackground(Color.GREEN);
@@ -244,6 +243,7 @@ public class TicTacToe implements ActionListener{
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         db.execSQL("insert into winners values('" + s + "')");
+        System.out.println(db.execSQL("Select name from winners"));
     }
     public void draw() {
 

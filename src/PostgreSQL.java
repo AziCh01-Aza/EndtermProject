@@ -7,7 +7,7 @@ public class PostgreSQL {
     ResultSet res = null;
 
     public PostgreSQL(){
-        connect("dbc:postgresql://localhost:5432/postgres", "postgres", "123");
+        connect("jdbc:postgresql://localhost:5432/postgres", "postgres", "0000");
     }
     /*
     create table winners(
